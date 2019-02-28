@@ -1,5 +1,4 @@
 #include "planeAngel.h"
-#include <cstring>
 
 planeAngel::planeAngel(){}
 
@@ -25,7 +24,7 @@ void planeAngel::getSin(){
     cout<<"Синус угла="<<sin(degree)<<endl;
 }
 
-void planeAngel:inDEcrease(bool fl, double value, char znak){
+void planeAngel::inDEcrease(bool fl, double value, char znak){
     if(fl==0)
         if(znak=='-')
             radian-=(int)value;
@@ -38,7 +37,7 @@ void planeAngel:inDEcrease(bool fl, double value, char znak){
             degree+=value;
 }
 
-void planeAngel:diff(int radian){
+void planeAngel::diff(int radian){
     if(this->radian==radian)
         cout<<"Углы равны."<<endl;
     if(this->radian<radian)

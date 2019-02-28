@@ -5,6 +5,8 @@
 */
 #include <iostream>
 #include <cmath>
+#include <cstring>
+#include <clocale>
 using namespace std;
 
 class planeAngel

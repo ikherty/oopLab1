@@ -12,6 +12,7 @@
 
 int main(int argc, char *argv[])
 {
+    setlocale(LC_ALL,"rus");
     planeAngel firstObj;
     //firstObj.Read();
     //firstObj.getSin();
