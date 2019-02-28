@@ -16,10 +16,10 @@
 
 int main(int argc, char *argv[])
 {
-   // double e=1*RAD_TO_DEG;
-    int radian, degree, minute;
+    int radian, degree;
     planeAngel firstObj;
-    firstObj.Read(radian, degree, minute);
-    firstObj.Init(radian, degree, minute);
+    //firstObj.Read(radian, degree);
+    //firstObj.Init(radian, degree);
+    cout<<"Valentina ";
     return 0;
 }

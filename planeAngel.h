@@ -17,15 +17,14 @@ class planeAngel
 {
     int radian;
     int degree;
-    int minute;
 public:
     planeAngel();
-    void convert();//M_PI*degree/180;
+    static void convert();//M_PI*degree/180;
     void privedenie();
 
     void getSin();
-    void Init(int radian, int degree, int minute);
-    static int Read(int radian, int degree, int minute);
+    void Init(int radian, int degree);
+    static int Read();
     void toString();
 };
 
