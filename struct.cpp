@@ -11,51 +11,51 @@ struct planeAngle
 }one;
 
 void convert(){
-    if(degree!=0||radian!=0){
-        if(degree==0)
-            degree=(int)radian*180/M_PI;
-        if(radian==0)
-            radian=M_PI*degree/180;
+    if(one.degree!=0||one.radian!=0){
+        if(one.degree==0)
+            one.degree=(int)one.radian*180/M_PI;
+        if(one.radian==0)
+            one.radian=M_PI*one.degree/180;
     }
 }
 
 void privedenie0_360(){
-    while(degree<0)
-        degree+=360;
-    while(degree>360)
-        degree-=360;
+    while(one.degree<0)
+        one.degree+=360;
+    while(one.degree>360)
+        one.degree-=360;
     convert();
 }
 
 void getSin(){
-    cout<<"Синус угла="<<sin(degree)<<endl;
+    cout<<"Синус угла="<<sin(one.degree)<<endl;
 }
 
 void inDEcrease(bool fl, double value, char znak){
     if(fl==0)
         if(znak=='-')
-            radian-=(int)value;
+            one.radian-=(int)value;
         else
-            radian+=(int)value;
+            one.radian+=(int)value;
     else
         if(znak=='-')
-            degree-=value;
+            one.degree-=value;
         else
-            degree+=value;
+            one.degree+=value;
 }
 
 void diff(int radian){
-    if(this->radian==radian)
+    if(one.radian==radian)
         cout<<"Углы равны."<<endl;
-    if(this->radian<radian)
+    if(one.radian<radian)
         cout<<"Угол в объекте меньше."<<endl;
-    if(this->radian>radian)
+    if(one.radian>radian)
         cout<<"Угол в объекте больше."<<endl;
 }
 
 void Init(int radian, double degree){
-    this->radian=radian;
-    this->degree=degree;
+    one.radian=radian;
+    one.degree=degree;
 }
 
 void Read(){
@@ -68,9 +68,9 @@ void Read(){
     while(!loop){
      cin>>answer;
      if(answer==1){
-        loop=1; 
+        loop=1;
         cout<<"Введите угол в радианах:";
-        cin>>radian;        
+        cin>>radian;
      }
      else
          if(answer==2){
@@ -86,12 +86,13 @@ void Read(){
 }
 
 void toString(){
-    cout<<"Угол на плоскости задан в "<<radian<<" радианах"<<endl;
-    cout<<"Угол на плоскости задан в "<<(int)degree<<"°"<<(int)(degree-(int)degree)*100<<"'"<<endl;
+    cout<<"Угол на плоскости задан в "<<one.radian<<" радианах"<<endl;
+    cout<<"Угол на плоскости задан в "<<(int)one.degree<<"°"<<(int)(one.degree-(int)one.degree)*100<<"'"<<endl;
 }
 
 int main(int argc, char *argv[])
 {
     setlocale(LC_ALL,"rus");
+
     return 0;
 }

@@ -61,9 +61,9 @@ void planeAngel::Read(){
     while(!loop){
      cin>>answer;
      if(answer==1){
-        loop=1; 
+        loop=1;
         cout<<"Введите угол в радианах:";
-        cin>>radian;        
+        cin>>radian;
      }
      else
          if(answer==2){
